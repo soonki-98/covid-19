@@ -1,4 +1,4 @@
-import ListComponent from "../components/ListComponents";
+import ListComponent from "../../components/ListComponents";
 
 const Home = () => {
   const cities: string[] = [
