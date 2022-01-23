@@ -1,10 +1,13 @@
+import { StyledList } from "./styles";
+
 interface Props {
   lists: string[];
+  direction?: "row" | "col";
 }
 
-const ListComponent = ({ lists }: Props) => {
+const ListComponent = ({ lists, direction = "col" }: Props) => {
   return (
-    <ul>
+    <StyledList direction={direction}>
       {lists.map((list) => {
         return (
           <li key={list}>
@@ -12,7 +15,7 @@ const ListComponent = ({ lists }: Props) => {
           </li>
         );
       })}
-    </ul>
+    </StyledList>
   );
 };
 

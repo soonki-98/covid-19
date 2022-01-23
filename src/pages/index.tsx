@@ -21,7 +21,7 @@ const Home = () => {
     "제주",
   ];
 
-  return <ListComponent lists={cities} />;
+  return <ListComponent lists={cities} direction="row" />;
 };
 
 export default Home;
