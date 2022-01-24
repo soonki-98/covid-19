@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ListComponent from "../../components/ListComponents";
 
 const Home = () => {
@@ -21,7 +22,17 @@ const Home = () => {
     "제주",
   ];
 
-  return <ListComponent lists={cities} direction="row" />;
+  return (
+    <ListComponent direction="row">
+      {cities.map((city, idx) => (
+        <Link to={`/city/${city}`}>
+          <li key={idx}>
+            <span>{city}</span>
+          </li>
+        </Link>
+      ))}
+    </ListComponent>
+  );
 };
 
 export default Home;

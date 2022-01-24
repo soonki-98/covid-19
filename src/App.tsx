@@ -1,11 +1,14 @@
-import Home from "./pages/Home";
 import Router from "./pages/indes";
+import GlobalStyle from "./static/styles";
 
 function App() {
   return (
-    <div className="App">
-      <Router />
-    </div>
+    <>
+      <GlobalStyle />
+      <div className="App">
+        <Router />
+      </div>
+    </>
   );
 }
 

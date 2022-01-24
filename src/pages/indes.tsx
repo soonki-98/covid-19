@@ -1,4 +1,5 @@
 import { Route, RouteProps, Routes } from "react-router-dom";
+import City from "./City";
 import Home from "./Home";
 
 const Router = () => {
@@ -6,6 +7,10 @@ const Router = () => {
     {
       path: "/",
       element: <Home />,
+    },
+    {
+      path: "/city/:id",
+      element: <City />,
     },
   ];
 

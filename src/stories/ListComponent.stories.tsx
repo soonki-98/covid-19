@@ -7,12 +7,11 @@ export default {
   component: ListComponent,
 } as ComponentMeta<typeof ListComponent>;
 
-const Template: ComponentStory<typeof ListComponent> = ({ lists, direction }) => (
-  <ListComponent lists={lists} direction={direction} />
+const Template: ComponentStory<typeof ListComponent> = ({ direction }) => (
+  <ListComponent direction={direction}>hi</ListComponent>
 );
 
 export const Primary = Template.bind({});
 Primary.args = {
-  lists: ["hi", "hello"],
   direction: "row",
 };

@@ -1,22 +1,13 @@
+import React from "react";
 import { StyledList } from "./styles";
 
 interface Props {
-  lists: string[];
   direction?: "row" | "col";
+  children: React.ReactNode;
 }
 
-const ListComponent = ({ lists, direction = "col" }: Props) => {
-  return (
-    <StyledList direction={direction}>
-      {lists.map((list) => {
-        return (
-          <li key={list}>
-            <span>{list}</span>
-          </li>
-        );
-      })}
-    </StyledList>
-  );
+const ListComponent = ({ direction = "col", children }: Props) => {
+  return <StyledList direction={direction}>{children}</StyledList>;
 };
 
 export default ListComponent;
