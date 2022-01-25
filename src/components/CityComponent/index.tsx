@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { CityState } from "../../static/interfaces/city";
 
 const CityComponent = () => {
-  const [state, setState] = useState<{ countryNm: string }>();
+  const [state, setState] = useState<CityState>();
   const id = useParams().id;
 
   useEffect(() => {
@@ -14,11 +15,20 @@ const CityComponent = () => {
         if (id) setState(res[id]);
       });
   }, [id]);
+
   return (
     <>
       {state && (
         <div>
           <h1>{state.countryNm}</h1>
+          <div>
+            <ul>
+              <li>
+                <p>총합</p>
+                <p>{state.totalCnt}</p>
+              </li>
+            </ul>
+          </div>
         </div>
       )}
     </>

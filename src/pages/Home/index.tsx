@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import ListComponent from "../../components/ListComponents";
-import { cities } from "../../constant/city";
+import { cities } from "../../static/constant/city";
 
 const Home = () => {
   const citiesKor = cities.map((city) => Object.keys(city)[0]);
