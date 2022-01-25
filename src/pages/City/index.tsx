@@ -1,5 +1,7 @@
+import CityComponent from "../../components/CityComponent";
+
 const City = () => {
-  return <div>city</div>;
+  return <CityComponent />;
 };
 
 export default City;

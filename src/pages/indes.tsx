@@ -15,13 +15,11 @@ const Router = () => {
   ];
 
   return (
-    <>
-      <Routes>
-        {routerList.map((router, idx) => (
-          <Route {...router} key={idx} />
-        ))}
-      </Routes>
-    </>
+    <Routes>
+      {routerList.map((router, idx) => (
+        <Route {...router} key={idx} />
+      ))}
+    </Routes>
   );
 };
 

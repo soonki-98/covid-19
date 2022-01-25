@@ -1,32 +1,15 @@
 import { Link } from "react-router-dom";
 import ListComponent from "../../components/ListComponents";
+import { cities } from "../../constant/city";
 
 const Home = () => {
-  const cities: string[] = [
-    "서울",
-    "부산",
-    "대구",
-    "인천",
-    "광주",
-    "대전",
-    "울산",
-    "세종",
-    "경기",
-    "강원",
-    "충북",
-    "충남",
-    "전북",
-    "전남",
-    "경북",
-    "경남",
-    "제주",
-  ];
-
+  const citiesKor = cities.map((city) => Object.keys(city)[0]);
+  const citiesEng = cities.map((city) => Object.values(city)[0]);
   return (
     <ListComponent direction="row">
-      {cities.map((city, idx) => (
-        <Link to={`/city/${city}`}>
-          <li key={idx}>
+      {citiesKor.map((city, idx) => (
+        <Link key={idx} to={`/city/${citiesEng[idx]}`}>
+          <li>
             <span>{city}</span>
           </li>
         </Link>

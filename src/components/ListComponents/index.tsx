@@ -7,7 +7,11 @@ interface Props {
 }
 
 const ListComponent = ({ direction = "col", children }: Props) => {
-  return <StyledList direction={direction}>{children}</StyledList>;
+  return (
+    <>
+      <StyledList direction={direction}>{children}</StyledList>
+    </>
+  );
 };
 
 export default ListComponent;
